@@ -89,7 +89,13 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="adfgyds"
+                android:text="В данном приложении можно просматривать преступников, размещенных на сайте Interpol.
+При нажатии на одну из карточек откроется страница с более подробной информацией о преступнике.\n
+При нажатии на кнопку слева сверху открывается меню, в котором можно либо перейти на главную страницу, либо перейти
+на страницу с информацией о приложении.\n
+При нажатии на кнопку фильтра справа сверху на главной странице откроется окно, в котором можно выбрать параметры,
+по которым будут отображаться карточки: национальность, пол, какой страной разыскивается и возраст. Также, при нажатии на кнопку Archived
+можно посмотреть 'Завязавших' преступников."
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +120,7 @@
                 android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:text="Разработчик: Самарцева Алиса.\nИсходный код:"
+                android:text="Разработчик: Самарцева Алиса.\nИсходный код: https://github.com/UelWico/InterpolApp"
                 android:textSize="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

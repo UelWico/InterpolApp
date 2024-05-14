@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
         try {
-            cardsOriginal = readFromJson();
+            cardsOriginal = readFromJson(R.raw.man);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -115,9 +115,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return out.toString();
     }
 
-    public Card[] readFromJson() throws IOException {
+    public Card[] readFromJson(int id) throws IOException {
 
-        int path = R.raw.man;
+        int path = id;
         Gson gson = new Gson();
         String fileContents = readFile(path);
         Card[] cards = gson.fromJson(fileContents, Card[].class);

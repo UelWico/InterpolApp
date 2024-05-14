@@ -31,7 +31,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    testOptions.unitTests.isIncludeAndroidResources = true
 }
+
+
 
 dependencies {
 
@@ -44,14 +47,11 @@ dependencies {
     implementation(libs.material3.android)
     implementation(libs.legacy.support.v4)
     testImplementation(libs.junit)
+    testImplementation("org.robolectric:robolectric:4.12.1")
+    androidTestImplementation("androidx.test:runner:1.5.2")
+    androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
     implementation("com.google.code.gson:gson:2.10.1")
 
-    val room_version = "2.6.1"
-
-    implementation("androidx.room:room-runtime:$room_version")
-    annotationProcessor("androidx.room:room-compiler:$room_version")
-    ksp("androidx.room:room-compiler:$room_version")
 
 }

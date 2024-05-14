@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "KRISTINA",
+    "lastName": "YAKUNINA",
+    "age": 34,
+    "gender": "female",
+    "nationality": "Kazakhstan",
+    "wantedBy": "Kazakhstan",
+    "physicalDescription": "Colour of eyes \tDark",
+    "details": "Language(s) spoken \tEnglish, Russian",
+    "charges": "co-participation in murder, robbery, extortion and theft or damage of documents",
+    "photoPath": "yakunina",
+    "archived": false
+  },
+  {
+    "id": 2,
+    "name": "ADAM",
+    "lastName": "BURSAGOV",
+    "age": 33,
+    "gender": "male",
+    "nationality": "Kazakhstan",
+    "wantedBy": "Russia",
+    "physicalDescription": "",
+    "details": "Language(s) spoken \tRussian",
+    "charges": "Participation in an illegal armed formation",
+    "photoPath": "bursagov",
+    "archived": false
+  },
+  {
+    "id": 3,
+    "name": "SERGEY",
+    "lastName": "LINNIK",
+    "age": 36,
+    "gender": "male",
+    "nationality": "Kazakhstan",
+    "wantedBy": "United States",
+    "physicalDescription": "Height \t1.73 metres\nWeight \t78 kilograms\nColour of hair \tBrown\nColour of eyes \tBlue",
+    "details": "Language(s) spoken \tRussian, English",
+    "charges": "1) Robbery in the first degree 2) Robbery in the second degree 3) Robbery in the second degree causing physical injury 4) Assault in the second degree 5) Criminal possession of a weapon in the fourth degree",
+    "photoPath": "linnik",
+    "archived": false
+  }
+]
