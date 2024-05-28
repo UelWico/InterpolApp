@@ -10,30 +10,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editminAge"
-            android:layout_width="140dp"
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Filter Criteria"
+            android:textColor="@color/fontColor1"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="48dp"
-            android:ems="10"
-            android:hint="Minimum age"
-            android:inputType="numberDecimal"
-            android:text=""
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Current Age"
+            android:textColor="@color/fontColor1"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WB_spinner" />
-
-        <EditText
-            android:id="@+id/editmaxAge"
-            android:layout_width="140dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="40dp"
-            android:ems="10"
-            android:hint="Maximum age"
-            android:inputType="numberDecimal"
-            android:text=""
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/WB_spinner" />
 
         <Button
@@ -42,21 +42,60 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="120dp"
             android:backgroundTint="@color/white"
+            android:fontFamily="@font/montserrat_medium"
+            android:insetBottom="12dp"
             android:onClick="setFilter"
             android:text="SEARCH"
-            android:fontFamily="@font/montserrat_semibold"
             android:textColor="@color/fontColor1"
-            android:textSize="24dp"
+            android:textSize="24sp"
             app:cornerRadius="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WB_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/switch1"
             app:strokeColor="#000000"
             app:strokeWidth="1dp" />
+
+        <EditText
+            android:id="@+id/editminAge"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:ems="10"
+            android:hint="Min age"
+            android:inputType="numberDecimal"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/montserrat"
+            android:text="to"
+            android:textColor="@color/fontColor1"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/editmaxAge"
+            app:layout_constraintStart_toEndOf="@+id/editminAge"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/editmaxAge"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="Max age"
+            android:inputType="numberDecimal"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <Spinner
             android:id="@+id/nationality_spinner"
@@ -73,26 +112,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Nationality"
             android:textColor="@color/fontColor1"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/g"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Gender"
-            android:fontFamily="@font/montserrat_semibold"
             android:textColor="@color/fontColor1"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/nationality_spinner" />
 
         <Spinner
             android:id="@+id/gender_spinner"
@@ -108,13 +147,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="Wanted by"
-            android:fontFamily="@font/montserrat_semibold"
             android:textColor="@color/fontColor1"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/gender_spinner" />
 
         <Spinner
             android:id="@+id/WB_spinner"
@@ -131,25 +170,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginTop="12dp"
+            android:fontFamily="@font/montserrat_medium"
             android:switchPadding="10dp"
             android:text="Archived"
             android:textColor="@color/fontColor1"
-            android:fontFamily="@font/montserrat_semibold"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/WB_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/editminAge"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!--    <LinearLayout-->
-<!--        android:layout_width="340dp"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:background="@color/white"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent">-->
-
-<!--    </LinearLayout>-->
 </androidx.cardview.widget.CardView>

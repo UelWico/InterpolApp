@@ -37,13 +37,13 @@ public class FilterCaseTest {
 
         Card[] cardTest, cardRight;
         cardTest = activity.readFromJson(R.raw.test);
-        cardRight = new Card[]{new Card(1, "KRISTINA", "YAKUNINA", 34, "female",
+        cardRight = new Card[]{new Card(1, "KRISTINA", "YAKUNINA", 34, "Female",
                 "Kazakhstan", "Kazakhstan", "Colour of eyes \tDark",
                 "Language(s) spoken \tEnglish, Russian", "co-participation in murder, robbery, extortion and theft or damage of documents",
                 "yakunina", false), new Card(2, "ADAM", "BURSAGOV", 33,
-                "male", "Kazakhstan", "Russia", "", "Language(s) spoken \tRussian",
+                "Male", "Kazakhstan", "Russia", "", "Language(s) spoken \tRussian",
                 "Participation in an illegal armed formation", "bursagov", false), new Card(3, "SERGEY", "LINNIK",
-                36, "male", "Kazakhstan", "United States", "Height \t1.73 metres\nWeight \t78 kilograms\nColour of hair \tBrown\nColour of eyes \tBlue",
+                36, "Male", "Kazakhstan", "United States", "Height \t1.73 metres\nWeight \t78 kilograms\nColour of hair \tBrown\nColour of eyes \tBlue",
                 "Language(s) spoken \tRussian, English", "1) Robbery in the first degree 2) Robbery in the second degree 3) Robbery in the second degree causing physical injury 4) Assault in the second degree 5) Criminal possession of a weapon in the fourth degree",
                 "linnik", false)};
         for (int i = 0; i < cardTest.length; i++) {
@@ -65,7 +65,7 @@ public class FilterCaseTest {
 
     @Test
     public void test_genderFilter() {
-        String gender = "female";
+        String gender = "Female";
         Card[] cardsFiltered = activity.getByGender(gender, cards);
         for (int i = 0; i < cardsFiltered.length; i++) {
             assertEquals(gender, cardsFiltered[i].gender);

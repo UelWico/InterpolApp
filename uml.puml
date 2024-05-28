@@ -1,0 +1,97 @@
+@startuml
+class com.example.oop.About {
+~ DrawerLayout drawerLayout
+# void onCreate(Bundle)
++ boolean onNavigationItemSelected(MenuItem)
+}
+
+
+class com.example.oop.MainActivity {
+~ Card[] cardsOriginal
+~ Card[] cardsFiltered
+~ Dialog dialog
+~ DrawerLayout drawerLayout
+~ FilterParameters param
+~ int page_num
+~ int max_page
+# void onCreate(Bundle)
++ void openFilter(View)
+~ String readFile(int)
++ Card[] readFromJson(int)
++ Card[] getByAge(int,int,Card[])
++ Card[] getByGender(String,Card[])
++ Card[] getByNationality(String,Card[])
++ Card[] getByWB(String,Card[])
++ Card[] getByArchived(boolean,Card[])
++ void setFilter(View)
++ Card[] getFilterCards()
++ void setCard(int,Card)
++ void hideCard(int)
++ void showCard(int)
++ void setPage()
++ void nextPage(View)
++ void previousPage(View)
+~ String[] listOfN()
+~ String[] listOfWB()
++ Card getCardById(int)
++ void onCardClick(View)
++ boolean onNavigationItemSelected(MenuItem)
+}
+
+
+class com.example.oop.FilterParameters {
+~ Map<Integer,String> map
+}
+
+class com.example.oop.SpinnerMy {
+~ int id
+~ Dialog dialog
+~ Spinner spinner
+~ String[] params
+~ ArrayAdapter<String> adapter
+~ FilterParameters paramsF
+~ Context context
+}
+
+class com.example.oop.Card {
+~ int id
+~ String name
+~ String lastName
+~ int age
+~ String gender
+~ String nationality
+~ String wantedBy
+~ String physicalDescription
+~ String details
+~ String charges
+~ String photoPath
+~ boolean archived
++ String toString()
++ String iPtoString()
++ String nameXlastName()
++ boolean isPD()
++ boolean isDet()
+}
+
+
+class com.example.oop.CardActivity {
+~ DrawerLayout drawerLayout
+# void onCreate(Bundle)
++ boolean onNavigationItemSelected(MenuItem)
+}
+
+
+
+java.io.Serializable <|.. com.example.oop.Card
+com.example.oop.OnNavigationItemSelectedListener <|.. com.example.oop.About
+androidx.appcompat.app.AppCompatActivity <|-- com.example.oop.About
+com.example.oop.OnNavigationItemSelectedListener <|.. com.example.oop.MainActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.oop.MainActivity
+com.example.oop.FilterParameters --> com.example.oop.MainActivity
+com.example.oop.OnNavigationItemSelectedListener <|.. com.example.oop.CardActivity
+androidx.appcompat.app.AppCompatActivity <|-- com.example.oop.CardActivity
+com.example.oop.MainActivity o-- com.example.oop.Card
+com.example.oop.CardActivity <-- com.example.oop.Card
+com.example.oop.MainActivity *-- com.example.oop.SpinnerMy
+com.example.oop.FilterParameters --* com.example.oop.SpinnerMy
+@enduml

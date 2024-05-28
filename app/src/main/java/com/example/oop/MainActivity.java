@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setPage();
 
         SpinnerMy spinnerN = new SpinnerMy(dialog, listOfN(), param, this, R.id.nationality_spinner);
-        SpinnerMy spinnerG = new SpinnerMy(dialog, new String[]{"", "female", "male"}, param, this, R.id.gender_spinner);
+        SpinnerMy spinnerG = new SpinnerMy(dialog, new String[]{"", "Female", "Male"}, param, this, R.id.gender_spinner);
         SpinnerMy spinnerWB = new SpinnerMy(dialog, listOfWB(), param, this, R.id.WB_spinner);
     }
 
@@ -211,7 +211,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Switch switch1 = dialog.findViewById(R.id.switch1);
         boolean arch = switch1.isChecked();
-        System.out.println(arch);
 
         int minAge = 0;
         int maxAge = 300;
@@ -229,8 +228,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (gender.isEmpty()) gender = "all";
         if (nationality.isEmpty()) nationality = "all";
         if (WB.isEmpty()) WB = "all";
-
-        System.out.println(gender);
 
         Card[] filterCards = getByAge(minAge, maxAge, cardsOriginal);
         filterCards = getByGender(gender, filterCards);
